@@ -83,7 +83,7 @@ void read_accelerations_from_1st_MPU6050() {
   Wire1.beginTransmission(MPU_ADDR1);
   Wire1.write(accel_x_reg);
   Wire1.endTransmission(false);
-  Wire1.requestFrom(MPU_ADDR1, 14, true);
+  Wire1.requestFrom(MPU_ADDR1, 6, true);
 
   ax1 = Wire1.read() << 8 | Wire1.read();
   ay1 = Wire1.read() << 8 | Wire1.read();
@@ -94,7 +94,7 @@ void read_accelerations_from_2nd_MPU6050() {
   Wire2.beginTransmission(MPU_ADDR2);
   Wire2.write(accel_x_reg);
   Wire2.endTransmission(false);
-  Wire2.requestFrom(MPU_ADDR2, 14, true);
+  Wire2.requestFrom(MPU_ADDR2, 6, true);
 
   ax2 = Wire2.read() << 8 | Wire2.read();
   ay2 = Wire2.read() << 8 | Wire2.read();
