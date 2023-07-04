@@ -159,7 +159,7 @@ void display_measurements() {
   Serial.print(", ");
   Serial.println(az2);
 
-  delay(200);  // Add a delay of 100 milliseconds
+  delay(200);  // Add a delay of 200 milliseconds
 }
 
 
